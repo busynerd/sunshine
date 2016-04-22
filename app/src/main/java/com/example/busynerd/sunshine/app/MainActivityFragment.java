@@ -2,6 +2,7 @@ package com.example.busynerd.sunshine.app;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.util.List;
 public class MainActivityFragment extends Fragment {
 
     ArrayAdapter<String> mForecastAdapter;
+    public static final String LOG_TAG = "MainActivityFragment";
 
     public MainActivityFragment() {
     }
@@ -53,6 +55,8 @@ public class MainActivityFragment extends Fragment {
         // Get a reference to the ListView, and attach this adapter to it.
         ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
         listView.setAdapter(mForecastAdapter);
+
+        Log.v(LOG_TAG, "Populated listview with fake data");
 
         return rootView;
     }
