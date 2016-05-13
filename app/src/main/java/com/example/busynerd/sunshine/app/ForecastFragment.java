@@ -65,7 +65,7 @@ public class ForecastFragment extends Fragment {
             Toast.makeText(getActivity(), "Refreshed", Toast.LENGTH_LONG).show();
 
             FetchWeatherTask weatherTask = new FetchWeatherTask();
-            weatherTask.execute("94043");
+            weatherTask.execute("90015");
             return true;
         }
 
